@@ -8,17 +8,33 @@
   <link rel="dns-prefetch" href="http://yoursite.com/blogs">
   <title>Category: test | 欢迎来到我的博客！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
   <meta property="og:type" content="website">
 <meta property="og:title" content="欢迎来到我的博客！">
 <meta property="og:url" content="http://yoursite.com/blogs/categories/test/index.html">
 <meta property="og:site_name" content="欢迎来到我的博客！">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欢迎来到我的博客！">
   
     <link rel="alternative" href="/atom.xml" title="欢迎来到我的博客！" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/blogs/assets/img/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/blogs/./main.507b3a.css">
   <style type="text/css">
@@ -41,11 +57,11 @@
 <div class="overlay" style="background: #333"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1504766117980&amp;di=cbdeff86939bd2f3a2739b00ce170968&amp;imgtype=0&amp;src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201412%2F17%2F20141217014214_mXwQF.jpeg" class="js-avatar">
+		<a href="" class="profilepic">
+			<img src="/blogs/assets/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">宾克斯的美酒</a></h1>
+		  <h1 class="header-author"><a href="">宾克斯的美酒</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">热爱或者离开</p>
@@ -104,7 +120,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1504766117980&amp;di=cbdeff86939bd2f3a2739b00ce170968&amp;imgtype=0&amp;src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201412%2F17%2F20141217014214_mXwQF.jpeg" class="js-avatar">
+				<img src="/blogs/assets/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">宾克斯的美酒</h1>
@@ -200,10 +216,6 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">新手</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">弱鸡</a>
-        		</li>
       		
 		</ul>
 	</div>
@@ -240,15 +252,30 @@
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2017 宾克斯的美酒
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+      <div class="footer-left">
+        &copy;
+        2017
+          宾克斯的美酒
+      </div>
+      <div>
+        <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+      </div>
+
+      <div class="footer-right">
+        <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a>        by Litten
+      </div>
     </div>
   </div>
 </footer>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+
+
+</script>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -333,6 +360,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">弱鸡</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
