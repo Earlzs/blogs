@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yoursite.com/blogs/blogs/2017/09/12/hexo%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2017-09-13T06:47:04.508Z</lastmod>
+    <data>
+        <display>
+        <title>github + hexo 搭建你的个人博客</title>
+        <pubTime>2017-09-12T09:22:08.731Z</pubTime>
+        
+        <tag>blogs</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/blogs/blogs/2017/09/13/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF/</loc>
+    <lastmod>2017-09-13T06:27:29.266Z</lastmod>
+    <data>
+        <display>
+        <title>数组去重的几种实现思路</title>
+        <pubTime>2017-09-13T05:27:55.747Z</pubTime>
+        
+        <tag>javaScript</tag>
+         
+        <tag>数组去重</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://yoursite.com/blogs/blogs/2017/06/06/hello_word/</loc>
+    <lastmod>2017-06-08T12:46:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-06-06T12:46:25.000Z</pubTime>
+        
+        <tag>blogs</tag>
+         
+        <tag>新手</tag>
+         
+         
+           
+             
+              <breadCrumb title="test" url="http://yoursite.com/blogs/blogs/categories/test/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>

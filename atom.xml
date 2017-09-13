@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>欢迎来到我的博客！</title>
+  
+  <subtitle>热爱或者离开</subtitle>
+  <link href="/blogs/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/blogs/"/>
+  <updated>2017-09-13T06:27:29.266Z</updated>
+  <id>http://yoursite.com/blogs/</id>
+  
+  <author>
+    <name>宾克斯的美酒</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数组去重的几种实现思路</title>
+    <link href="http://yoursite.com/blogs/2017/09/13/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF/"/>
+    <id>http://yoursite.com/blogs/2017/09/13/数组去重的几种实现思路/</id>
+    <published>2017-09-13T05:27:55.747Z</published>
+    <updated>2017-09-13T06:27:29.266Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在日常的开发过程中经常碰到数组去重的一些需求，数组去重也是面试中经常问到的一个问题，在此对已知的方法进行一个总结&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="javaScript" scheme="http://yoursite.com/blogs/tags/javaScript/"/>
+    
+      <category term="数组去重" scheme="http://yoursite.com/blogs/tags/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github + hexo 搭建你的个人博客</title>
+    <link href="http://yoursite.com/blogs/2017/09/12/hexo%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/blogs/2017/09/12/hexo搭建你的个人博客/</id>
+    <published>2017-09-12T09:22:08.731Z</published>
+    <updated>2017-09-13T06:47:04.508Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;看到别人都有自己的个人博客特别的羡慕，于是自己也想搞一个!废话不多说，直接开始干！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="blogs" scheme="http://yoursite.com/blogs/tags/blogs/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/blogs/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/blogs/2017/06/06/hello_word/"/>
+    <id>http://yoursite.com/blogs/2017/06/06/hello_word/</id>
+    <published>2017-06-06T12:46:25.000Z</published>
+    <updated>2017-06-08T12:46:25.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;!--这个命令用来隐藏下面的内容--&gt;
+    
+    </summary>
+    
+      <category term="test" scheme="http://yoursite.com/blogs/categories/test/"/>
+    
+    
+      <category term="blogs" scheme="http://yoursite.com/blogs/tags/blogs/"/>
+    
+      <category term="新手" scheme="http://yoursite.com/blogs/tags/%E6%96%B0%E6%89%8B/"/>
+    
+  </entry>
+  
+</feed>
