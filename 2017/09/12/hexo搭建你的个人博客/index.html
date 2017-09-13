@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="欢迎来到我的博客！">
 <meta property="og:description" content="看到别人都有自己的个人博客特别的羡慕，于是自己也想搞一个!废话不多说，直接开始干！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-13T06:47:04.508Z">
+<meta property="og:updated_time" content="2017-09-13T08:33:30.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github + hexo 搭建你的个人博客">
 <meta name="twitter:description" content="看到别人都有自己的个人博客特别的羡慕，于是自己也想搞一个!废话不多说，直接开始干！">
@@ -48,11 +48,11 @@
 <div class="overlay" style="background: #333"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="" class="profilepic">
+		<a href="/blogs/" class="profilepic">
 			<img src="/blogs/assets/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">宾克斯的美酒</a></h1>
+		  <h1 class="header-author"><a href="/blogs/">宾克斯的美酒</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">热爱或者离开</p>
@@ -194,7 +194,7 @@
           <div id="toc-article" class="toc-article">
             <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
             <strong class="toc-title">文章目录</strong>
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github-hexo"><span class="toc-number">1.</span> <span class="toc-text">github + hexo</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github-hexo"><span class="toc-number">1.</span> <span class="toc-text">github + hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何安装rss"><span class="toc-number">2.</span> <span class="toc-text">如何安装rss?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在网站底部加上访问量"><span class="toc-number">3.</span> <span class="toc-text">在网站底部加上访问量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.1.</span> <span class="toc-text">在这里有两中不同计算方式的统计代码：</span></a></li></ol></li></ol>
           </div>
           <script type="text/javascript">
             function showToc() {
@@ -226,6 +226,33 @@
 <li>添加sitemap和feed插件</li>
 <li>添加404 公益页面9</li>
 </ol>
+<h2 id="如何安装rss"><a href="#如何安装rss" class="headerlink" title="如何安装rss?"></a>如何安装rss?</h2><p>关于SEO与RSS，需要在博客根目录（注意不是你的主题根目录）安装这三个node_modules:</p>
+<blockquote>
+<p>  npm install hexo-generator-feed –save<br>    npm hexo-generator-baidu-sitemap –save<br>    npm hexo-generator-sitemap  –save</p>
+</blockquote>
+<p>安装完成后，运行 Hexo g   然后可以看到在跟目录下的Public/ 生成了  atom.xml  baidusitemap.xml  sitemap.xml<br>还要在你的主题目录下 /yilia/_config.yml/   subnav:配置下的rss:/atom.xml<br><!--<img src='../assets/img/hexo/1.jpg' />--></p>
+<h2 id="在网站底部加上访问量"><a href="#在网站底部加上访问量" class="headerlink" title="在网站底部加上访问量"></a>在网站底部加上访问量</h2><p>打开\themes\yilia\layout\footer.ejs文件,在底部加上</p>
+<blockquote>
+<p><code>&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code></p>
+</blockquote>
+<p>然后再合适的位置添加显示统计的代码，如图：</p>
+<blockquote>
+<p><code>&lt;div class=&quot;powered-by&quot;&gt;</code><br><code>&lt;i class=&quot;fa fa-user-md&quot;&gt;&lt;/i&gt;&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</code><br><code>本站访客数:&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;</code><br><code>&lt;/span&gt;</code><br><code>&lt;/div&gt;</code></p>
+</blockquote>
+<p></p><h3>在这里有两中不同计算方式的统计代码：</h3><p></p>
+<ul>
+<li><p>pv的方式，单个用户连续点击n篇文章，记录n次访问量</p>
+<blockquote>
+<p><code>&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</code><br>   <code>本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</code><br><code>&lt;/span&gt;</code></p>
+</blockquote>
+</li>
+<li><p>uv的方式，单个用户连续点击n篇文章，只记录1次访客数</p>
+<blockquote>
+<p><code>&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</code><br> <code>本站总访问量&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;次</code><br><code>&lt;/span&gt;</code></p>
+</blockquote>
+</li>
+</ul>
+<p>添加之后再执行hexo d -g，然后再刷新页面就能看到效果</p>
 
                           
 
@@ -426,7 +453,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github-hexo"><span class="toc-number">1.</span> <span class="toc-text">github + hexo</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github-hexo"><span class="toc-number">1.</span> <span class="toc-text">github + hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何安装rss"><span class="toc-number">2.</span> <span class="toc-text">如何安装rss?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在网站底部加上访问量"><span class="toc-number">3.</span> <span class="toc-text">在网站底部加上访问量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.1.</span> <span class="toc-text">在这里有两中不同计算方式的统计代码：</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -454,6 +481,7 @@
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
+      
       <div class="footer-left">
         &copy;
         2017
