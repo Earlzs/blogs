@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com/blogs">
-  <title>hexo搭建你的个人博客 | 欢迎来到我的博客！</title>
+  <title>数组去重的几种实现思路 | 欢迎来到我的博客！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
@@ -23,18 +23,18 @@
         border-left-color: #1E92FB;    /*左边框颜色*/
     }
 </style>
-  <meta name="description" content="看到别人都有自己的个人博客特别的羡慕，于是自己也想搞一个!废话不多说，直接开始干！">
-<meta name="keywords" content="blogs,hexo">
+  <meta name="description" content="在日常的开发过程中经常碰到数组去重的一些需求，数组去重也是面试中经常问到的一个问题，在此对已知的方法进行一个总结">
+<meta name="keywords" content="javaScript,数组去重">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo搭建你的个人博客">
-<meta property="og:url" content="http://yoursite.com/blogs/2017/09/12/hexo搭建你的个人博客/index.html">
+<meta property="og:title" content="数组去重的几种实现思路">
+<meta property="og:url" content="http://yoursite.com/blogs/2017/09/13/数组去重的几种实现思路/index.html">
 <meta property="og:site_name" content="欢迎来到我的博客！">
-<meta property="og:description" content="看到别人都有自己的个人博客特别的羡慕，于是自己也想搞一个!废话不多说，直接开始干！">
+<meta property="og:description" content="在日常的开发过程中经常碰到数组去重的一些需求，数组去重也是面试中经常问到的一个问题，在此对已知的方法进行一个总结">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-13T06:29:57.774Z">
+<meta property="og:updated_time" content="2017-09-13T06:27:29.266Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo搭建你的个人博客">
-<meta name="twitter:description" content="看到别人都有自己的个人博客特别的羡慕，于是自己也想搞一个!废话不多说，直接开始干！">
+<meta name="twitter:title" content="数组去重的几种实现思路">
+<meta name="twitter:description" content="在日常的开发过程中经常碰到数组去重的一些需求，数组去重也是面试中经常问到的一个问题，在此对已知的方法进行一个总结">
   
     <link rel="alternative" href="/atom.xml" title="欢迎来到我的博客！" type="application/atom+xml">
   
@@ -180,7 +180,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo搭建你的个人博客" class="article article-type-post "
+            <article id="post-数组去重的几种实现思路" class="article article-type-post "
   itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -188,15 +188,15 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hexo搭建你的个人博客
+      数组去重的几种实现思路
     </h1>
   
 
           <!-- 显示阅读和评论数 -->
           
               
-                <a href="/blogs/2017/09/12/hexo搭建你的个人博客/" class="archive-article-date">
-  	<time datetime="2017-09-12T09:22:08.731Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
+                <a href="/blogs/2017/09/13/数组去重的几种实现思路/" class="archive-article-date">
+  	<time datetime="2017-09-13T05:27:55.747Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
 </a>
                   
       </header>
@@ -212,7 +212,7 @@
           <div id="toc-article" class="toc-article">
             <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
             <strong class="toc-title">文章目录</strong>
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github-hexo"><span class="toc-number">1.</span> <span class="toc-text">github + hexo</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ES6-new-Set"><span class="toc-number">1.</span> <span class="toc-text">ES6 new Set()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arr-filter-过滤"><span class="toc-number">2.</span> <span class="toc-text">arr.filter 过滤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用对象的属性去重（推荐）"><span class="toc-number">3.</span> <span class="toc-text">利用对象的属性去重（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最简单的一种方式"><span class="toc-number">4.</span> <span class="toc-text">最简单的一种方式</span></a></li></ol>
           </div>
           <script type="text/javascript">
             function showToc() {
@@ -234,9 +234,24 @@
             <!-- 目录内容结束 -->
             <div class="article-entry" itemprop="articleBody">
               
-                        <p>看到别人都有自己的个人博客特别的羡慕，于是自己也想搞一个!废话不多说，直接开始干！</p>
+                        <p>在日常的开发过程中经常碰到数组去重的一些需求，数组去重也是面试中经常问到的一个问题，在此对已知的方法进行一个总结</p>
 <a id="more"></a>
-<h2 id="github-hexo"><a href="#github-hexo" class="headerlink" title="github + hexo"></a>github + hexo</h2><p>搭建环境准备（包括node.js和git环境，gitHub账户的配置）<br>安装Hexo<br>配置Hexo<br>怎样将Hexo与github page 联系起来<br>怎样发布文章<br>主题 推荐<br>主题Net的简单配置<br>添加sitemap和feed插件<br>添加404 公益页面</p>
+<h2 id="ES6-new-Set"><a href="#ES6-new-Set" class="headerlink" title="ES6 new Set()"></a>ES6 new Set()</h2><p>Set数据结构，它类似于数组， 但是其成员的值都是唯一的，我们可以利用其成员值都是唯一这个特点进行数组去重</p>
+<blockquote>
+<p>  function unique (array) {<br>       return Array.from(new Set(array));<br>   }<br>   var arr=[2,’1’,2,3,’1’,’hi’,6,’hello’,’hi’];<br>   unique(arr)</p>
+<p><hr><br>当然还有更简单的写法<br> […new Set([2,’1’,2,3,’1’,’hi’,6,’hello’,’hi’])]</p>
+</blockquote>
+<h2 id="arr-filter-过滤"><a href="#arr-filter-过滤" class="headerlink" title="arr.filter 过滤"></a>arr.filter 过滤</h2><p>filter可以过滤出符合条件的内容， item表示当前项 <strong>arr[i]</strong>  ，<strong>index</strong> 索引 ，<strong>arr</strong>代表整个数组<br>利用indexOf查找数组中的元素每次返回的一定是第一次出现的位置的索引，所以匹配到出现过一次的元素，必定！===index<br>这样我们return出来的内容全都是<strong>“独一无二”</strong>的 </p>
+<blockquote>
+<p>var arr=[2,’1’,2,3,’1’,’hi’,6,’hello’,’hi’];<br>arr.filter(function(item,index,arr){<br>   return arr.indexOf(item)===index<br> })</p>
+</blockquote>
+<h2 id="利用对象的属性去重（推荐）"><a href="#利用对象的属性去重（推荐）" class="headerlink" title="利用对象的属性去重（推荐）"></a>利用对象的属性去重（推荐）</h2><p>每次取出原数组的元素，然后再对象中访问这个属性，如果存在就说明重复</p>
+<blockquote>
+<p>function unique(arr){<br>　　var res =[];   //保存结果的数组<br>　　var json = {};<br>　　for(var i=0;i&lt;arr.length;i++){<br>　　　　if(!json[arr[i]]){<br>　　　　　　res.push(arr[i]);<br>　　　　　　json[arr[i]] = 1;<br>　　　　}<br>　　}<br>　　return res;<br>}</p>
+</blockquote>
+<h2 id="最简单的一种方式"><a href="#最简单的一种方式" class="headerlink" title="最简单的一种方式"></a>最简单的一种方式</h2><blockquote>
+<p>var arr = [‘abc’,’abcd’,’sss’,’2’,’d’,’t’,’2’,’ss’,’f’,’22’,’d’];<br>//定义一个新的数组<br>var s = [];<br>//遍历数组<br>for(var i = 0;i&lt;arr.length;i++){<br>    if(s.indexOf(arr[i]) == -1){  //判断在s数组中是否存在，不存在则push到s数组中<br>        s.push(arr[i]);<br>    }<br>}<br>console.log(s);<br>//输出结果：[“abc”, “abcd”, “sss”, “2”, “d”, “t”, “ss”, “f”, “22”]</p>
+</blockquote>
 
                           
 
@@ -325,11 +340,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">blogs</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数组去重</a>
         		</li>
       		
 		</ul>
@@ -385,7 +400,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/blogs/2017/09/12/hexo搭建你的个人博客/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/blogs/2017/09/13/数组去重的几种实现思路/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -399,18 +414,9 @@
   
 <nav id="article-nav">
   
-    <a href="/blogs/2017/09/13/数组去重的几种实现思路/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数组去重的几种实现思路
-        
-      </div>
-    </a>
   
-  
-    <a href="/blogs/2017/06/06/hello_word/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/blogs/2017/09/12/hexo搭建你的个人博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo搭建你的个人博客</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -437,7 +443,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github-hexo"><span class="toc-number">1.</span> <span class="toc-text">github + hexo</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ES6-new-Set"><span class="toc-number">1.</span> <span class="toc-text">ES6 new Set()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arr-filter-过滤"><span class="toc-number">2.</span> <span class="toc-text">arr.filter 过滤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用对象的属性去重（推荐）"><span class="toc-number">3.</span> <span class="toc-text">利用对象的属性去重（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最简单的一种方式"><span class="toc-number">4.</span> <span class="toc-text">最简单的一种方式</span></a></li></ol>
                     </div>
                 </span>
             </div>
